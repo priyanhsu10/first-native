@@ -2,6 +2,8 @@ import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View, Button } from "react-native";
 
 import { useState } from "react";
+import Layout from "./components/Layout";
+import LayoutPractic from "./components/LayoutPractic";
 
 export default function App() {
   const [couter, setCouter] = useState(0);
@@ -12,10 +14,8 @@ export default function App() {
     setCouter((x) => x - 1);
   };
   return (
-    <View style={styles.container}>
-      <Text>{couter}</Text>
-      <Button title="counter +" onPress={increase} />
-      <Button title="counter -" onPress={decriese} />
+    <View>
+      <Layout />
     </View>
   );
 }
